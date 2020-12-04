@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Yoursel</title>
+    <title>Play Yourself</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>
+    
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="player">
-      <div class="imgBx">
-        <img src="Me.jpg" alt="Me">
+</head>
+<body>
+
+    <div class="music-player">
+      <div class="music-album-photo">
+          <img src="Me.jpg" alt="">
       </div>
-      <audio controls>
-        <source src="vanic_x_zella_day_hypnotic.mp3" type="audio/mp3">
-      </audio>
+
+      <div class="music-detail">
+          <h2>Hypnotic</h2>
+          <p>Vanic X Zella Day</p>
+      </div>
+
+      <audio id="player" src="vanic_x_zella_day_hypnotic.mp3"></audio>
+
+      <div class="music-changer">
+        <button id="play" onclick = "document.getElementById('player').play()">
+          <i class="play-pause fa fa-play"></i>      
+        </button>
+        <button id="pause" onclick = "document.getElementById('player').pause()">
+          <i class="fa fa-pause"></i>  
+        </button>
+        <button id="vol-up" onclick = "document.getElementById('player').volume += 0.2">
+          <i class="fa fa-plus"></i>  
+        </button>
+        <button id="vol-down" onclick = "document.getElementById('player').volume -= 0.2">
+          <i class="fa fa-minus"></i> 
+        </button>
+      </div>
+
+      <!-- <div class="play-timeline" value="0" max="1">
+          <div class="time">
+              <span>01:27</span> <span>05:14</span>
+          </div>
+          <div class="timeline-bar"></div>
+      </div> -->
     </div>
-  </body>
+
+    <!-- <div class="player">
+      <div class="info">
+        <div class="name">
+          All of me
+        </div>
+        <div class="singer">
+          John Legend
+        </div>
+      </div>
+      <div class="btns">
+        <div class="play"></div>
+        <div class="next"></div>
+      </div>
+      <div class="progress"></div>
+    </div> -->
+
+</body>
 </html>
